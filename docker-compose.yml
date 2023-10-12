@@ -1,7 +1,7 @@
 version: "3"
 services:
   my-app:
-    image: 726589309696.dkr.ecr.us-east-1.amazonaws.com/my-app:1.11
+    image: 726589309696.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
     ports:
       - 3000:3000
     volumes:
