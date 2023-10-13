@@ -9,8 +9,11 @@ RUN mkdir -p /home/app
 
 WORKDIR /home/app
 
-COPY . .
+COPY package*.json ./
 
 RUN npm install
+
+COPY . .
+
 
 CMD ["npm", "run","dev"]
