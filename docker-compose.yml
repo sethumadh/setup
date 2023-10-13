@@ -3,7 +3,7 @@ services:
   my-app:
     build: 
       context: ./app
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - 3000:3000
     volumes:
