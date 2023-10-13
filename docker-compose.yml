@@ -1,12 +1,16 @@
 version: "3"
 services:
   my-app:
-    image: 726589309696.dkr.ecr.us-east-1.amazonaws.com/my-app:latest
+    build: 
+      context: ./app
+      dockerfile: Dockerfile
     ports:
       - 3000:3000
     volumes:
       - ./app:/home/app
       - /home/app/node_modules
+    depends_on:
+      - mongodb
   mongodb:
     image: mongo
     ports: 
